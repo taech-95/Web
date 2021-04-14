@@ -15,8 +15,8 @@ h1 {
     justify-content: center;
     flex-wrap: wrap-reverse;
     align-items: flex-end;
+    align-content: center;
     
-
 }
 
 #container div {
@@ -24,4 +24,32 @@ h1 {
  height: 200px;
  font-size: 4em;
  text-align: center;
+ flex-basis: 400px;
+}
+
+
+
+h2{
+    text-align: center;
+}
+main {
+width: 80%;
+margin: 0 auto;
+border: 5px solid black;
+height: 500px;
+display: flex;
+
+}
+
+main .sidebar{
+background-color: #6930c3;
+border: 2px solid white;
+flex: 1 2 300px
+
+}
+
+main .maincontent{
+background-color: #80ffdb;
+flex: 2 1 600px
+
 }
