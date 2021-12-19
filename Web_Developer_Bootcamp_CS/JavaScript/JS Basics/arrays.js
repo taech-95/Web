@@ -31,3 +31,53 @@ const airplaneSeats = [
     ['Rin', 'Sakura', 'Francisco']
 ];
 airplaneSeats[3][1] = "Hugo";
+
+//object literals
+const person = {
+    firstName : "Mykola",
+    lastName: "Maksymov",
+    age : 26
+};
+
+console.log(person.firstName);
+const kitchenSink = {
+    favNum : 232482318421,
+    isFunny: true,
+    colors : ['red', 'orange']
+};
+
+const product = {
+    name : "Gummy Bears",
+    inStock : true,
+    price : 1.99,
+    flavors : ["grape","apple","cherry"]
+};
+
+product.flavors[1];
+product["name"];
+const years = {
+    1999: 'Good',
+    2020: 'Bad'
+}
+
+//PLEASE DON'T TOUCH THIS LINE!
+const restaurant = {
+    name: 'Ichiran Ramen',
+    address: `${Math.floor(Math.random() * 100) + 1} Johnson Ave`,
+    city: 'Brooklyn',
+    state: 'NY',
+    zipcode: '11206',
+}
+
+//YOUR CODE GOES DOWN HERE:
+let fullAddress = restaurant.address + ', ' + restaurant.city + ', ' + restaurant.state + ' ' + restaurant.zipcode;
+
+const midTerms = {
+    daniel : 96,
+    thomas : 78
+};
+midTerms.thomas = 79;
+midTerms.ezra = 85;
+midTerms["antonio"] = 'A-';
+
+
