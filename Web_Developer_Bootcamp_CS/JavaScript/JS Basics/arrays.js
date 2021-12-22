@@ -80,4 +80,18 @@ midTerms.thomas = 79;
 midTerms.ezra = 85;
 midTerms["antonio"] = 'A-';
 
+const comment = [
+    {
+        username : 'Tammy',
+        text : 'lol',
+        votes: 9
+    },
+    {
+        username: 'FishBoi',
+        text: 'glub glub',
+        votes : 21312
+    }
+];
+
+comment[1].text;
 
