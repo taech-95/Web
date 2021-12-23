@@ -48,7 +48,7 @@ console.log(randomNumber)
 let yourNumber = parseInt(prompt("Enter your first Guess"))
 
 while(yourNumber!==guess){
-    let attempts = 1;
+     attempts += 1;
      yourNumber = (prompt("Enter your Guess"));
     if (yourNumber>guess) {
         yourNumber = (prompt("too high, enter a new guess"));
@@ -62,8 +62,21 @@ while(yourNumber!==guess){
 
 }
 if (yourNumber === 'quit') {
-    console.log("You quit")
+    console.log("You quit");
 }
 else{
-    console.log(`You got it. It takes ${attempts} guesses.`)
+    console.log(`You got it. It takes ${attempts} guesses.`);
 }
+
+const newPeople = ["Scooby", "Velma", "Daphne", "Shaggy", "Fred", "Mykola", "Stefan"];
+for (const i of newPeople) {
+    console.log(i);
+}
+
+const numbers = [1,2,3,4,5,6,7,8,9]; //DON'T CHANGE THIS LINE PLEASE!
+
+// WRITE YOUR LOOP BELOW THIS LINE:
+for(let number of numbers ){
+    console.log(number*number);
+}
+
