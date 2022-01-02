@@ -105,3 +105,75 @@ function returnDay(day){
             break;
     }
     }
+
+function add(x,y) {
+    return x+y;
+}
+
+const power = function(x,y) {
+    return x**y;
+}
+
+const square = function(num){
+    
+    return Math.pow(num,2);
+}
+function callTwice(func) {
+    func();
+    func();
+}
+
+function rollDie() {
+    const roll = Math.floor(Math.random()*6)+1;
+    console.log(roll)
+}
+
+callTwice(rollDie)
+
+
+function isBetween(num) {
+    return num >= 50&& num <=100;
+}
+function makeBetwwenFunc(min, max) {
+    return function (num) {
+        return num >= min && num <=max;
+    }
+}
+
+const math  = {
+    PI : 3.14159,
+    square : function (num) {
+        return num*num;
+    },
+    cube : function (num){
+        return num*num*num;
+    },
+    multiply(num1,num2){
+        return num1*num2;
+    }
+
+}
+
+const square = {
+    area(side){
+        return side*side;
+    },
+    perimeter(side){
+        return side*4;
+    }
+}
+
+const hen = {
+    name : 'Helen',
+    eggCount : 0,
+    layAnEgg(){
+        this.eggCount++;
+        return 'EGG';
+    }
+}
+
+try {
+    hello.toUpperCase()
+} catch (error) {
+    console.log('hello is not defined')
+}
