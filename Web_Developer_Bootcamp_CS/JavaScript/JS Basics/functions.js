@@ -53,7 +53,6 @@ function isShortsWeather(temperature){
         return false;
     }
 }
-Switc
 
 // DEFINE YOUR FUNCTION BELOW:
 function lastElement(input){
@@ -154,7 +153,7 @@ const math  = {
 
 }
 
-const square = {
+const square2 = {
     area(side){
         return side*side;
     },
@@ -177,3 +176,47 @@ try {
 } catch (error) {
     console.log('hello is not defined')
 }
+
+planets = ['The Moon','Venus', 'Earth', 'Mars', 'Jupiter'];
+upperPlanets = planets.map(function (planets) {
+    return planets.toUpperCase();
+})
+
+console.log(upperPlanets)
+
+const fullNames = [{first: 'Albus', last: 'Dumbledore'}, {first: 'Harry', last: 'Potter'}, {first: 'Hermione', last: 'Granger'}, {first: 'Ron', last: 'Weasley'}, {first: 'Rubeus', last: 'Hagrid'}, {first: 'Minerva', last: 'McGonagall'}, {first: 'Severus', last: 'Snape'}];
+const firstNames = fullNames.map(function(names){
+    return names.first;
+})
+const lastNames = (lastName)=> {
+    return lastName.last;
+}
+//arrow functions
+const greet2 = (name) => {
+    return `Hey ${name}!`;
+}
+//implicit return
+const add2 = (num1, num2) => num1+num2;
+
+setTimeout(()=>{
+    console.log("Hello")
+}, 3000);
+const id = setInterval(() => {
+    console.log((Math.random()*10)+1)
+}, 1500);
+
+scores = [1, 6, 12, 87, 132, 22412421, 12]
+const number = scores.filter((number)=>{
+    return number %2 ===1;
+})
+
+function validUserNames (param){
+    return param.filter(name=>name.length<10);
+}
+
+function allEvens(numbers){
+    return numbers.every(number => number%2===0);
+}
+
+const sum = scores.reduce((sum,numbers)=>sum +numbers);
+console.log(sum);
