@@ -220,3 +220,17 @@ function allEvens(numbers){
 
 const sum = scores.reduce((sum,numbers)=>sum +numbers);
 console.log(sum);
+
+const person2 = {
+    firstName: 'Mykola',
+    lastName: 'Maksymov',
+    fullName() {return `${this.firstName} ${this.lastName}`}
+}
+
+function roll (params=6){
+    return Math.floor(Math.random()*params)+1
+}
+
+function sumRest (...nums){
+    console.log(nums);
+}
