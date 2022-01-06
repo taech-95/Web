@@ -234,3 +234,8 @@ function roll (params=6){
 function sumRest (...nums){
     console.log(nums);
 }
+function sumRest2 (...nums){
+    return nums.reduce((total,element) => total + element);
+}
+const newScores = [213421,2312321,21421412,214123123,323131,313131]
+const [first, second, third, ...rest] = newScores;  
