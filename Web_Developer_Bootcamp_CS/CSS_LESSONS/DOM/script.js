@@ -41,3 +41,14 @@ for (let span of spans){
 
 spans.setAttribute('class','purple');
 spans.classList.add('purple');
+const lists = document.querySelectorAll('li');
+for (let li of lists){
+    li.classList.toggle('highlight');
+}
+const container = document.querySelector('#container');
+
+for (let i = 0; i< 100; i++){
+const button = document.createElement('button');
+button.innerText = 'HEY HEY HEY';
+container.appendChild(button);
+}
