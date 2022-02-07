@@ -21,3 +21,42 @@ btnHello.addEventListener('click',()=>{
 btnGoodBye.addEventListener('click', ()=>{
     console.log('Goodbye');
 })
+const h1 = document.querySelector('#h1');
+
+const randomColor = () =>{
+    let red = Math.floor(Math.random() * 255 + 1);
+    let green = Math.floor(Math.random() * 255 + 1);
+    let blue = Math.floor(Math.random() * 255 + 1);
+    return `rgb(${red},${green},${blue})`;
+    
+}
+
+const btnChange = document.querySelector('#btnColor');
+btnChange.addEventListener('click', ()=>{
+    const newColor = randomColor()
+    document.body.style.background= newColor;
+    h1.innerText = newColor;
+})
+
+const buttons = document.querySelectorAll('button');
+
+for (const button of buttons) {
+    button.addEventListener('click', ()=>{
+        console.log('Clicked!');
+        button.style.backgroundColor = randomColor();
+    });
+    
+}
+const form = document.querySelector('form');
+const item = document.querySelector('#item');
+const number = document.querySelector('#number')
+
+const list = document.querySelector('#list');
+
+form.addEventListener('submit', (evt)=>{
+    evt.preventDefault();
+    const text = number.value +" "+ item.value;
+    const newLi = document.createElement("LI");
+    newLi.innerText = text;
+    list.append(newLi);
+})
