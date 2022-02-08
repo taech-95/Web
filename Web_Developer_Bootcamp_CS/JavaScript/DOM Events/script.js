@@ -48,9 +48,8 @@ for (const button of buttons) {
     
 }
 const form = document.querySelector('form');
-const item = document.querySelector('#item');
-const number = document.querySelector('#number')
-
+const item = document.querySelector('#product');
+const number = document.querySelector('#qty')
 const list = document.querySelector('#list');
 
 form.addEventListener('submit', (evt)=>{
@@ -59,4 +58,26 @@ form.addEventListener('submit', (evt)=>{
     const newLi = document.createElement("LI");
     newLi.innerText = text;
     list.append(newLi);
+    number.value = "";
+    item.value ="";
 })
+
+item.addEventListener('change', () =>{
+    console.log('Changed');
+})
+item.addEventListener('input', ()=>{
+    h1.innerText = item.value;
+    console.log('input event');
+})
+
+const userName = document.querySelector('#username');
+
+userName.addEventListener('input', ()=>{
+    if (userName.value === ""){
+        h1.innerText = "Enter Your Username";
+    } 
+    else{
+        h1.innerText = `Welcome, ${userName.value}` ;
+    }
+ });
+ 
