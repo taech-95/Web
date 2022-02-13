@@ -25,7 +25,7 @@ function updateScore (player,opponent) {
             player.display.classList.add('has-text-succes');
             opponent.display.classList.add('has-text-danger');
             player.button.disabled = true;
-            opponent.button.diasbled = true;
+            opponent.button.disabled = true;
         }
         player.display.textContent = player.score;
     }
