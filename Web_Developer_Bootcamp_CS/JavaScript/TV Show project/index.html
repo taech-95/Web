@@ -4,9 +4,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <h1>Click to get new jokes</h1>
+    <button>Click Me</button>
+    <ul id="jokes"></ul>
+    <h1>TV Show Search</h1>
+    <form id ="searchForm" action="">
+        <input type="text" placeholder ="search" name="query" id="searchMovie">
+        <button id=searchBtn>Click to search</button>
+    </form>
+    
     <script src="app.js"></script>
 </body>
 </html>
