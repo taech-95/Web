@@ -1,0 +1,14 @@
+
+<%- include 'partials/head.ejs' %> 
+</head>
+<body>
+    <h1><%= Math.floor(Math.random() * 10)+1  %> </h1>
+    <h2>The number from app.js <%= rand %> </h2>
+<% if(rand%2===0){ %>
+    <h2><%= rand  %> is even number </h2>
+<% } else  { %> 
+    <h2> <%= rand  %> is odd number</h2>
+<%};%>
+<h3><%= rand%2===0? 'Even' : 'Odd' %> </h3>
+</body>
+</html>

@@ -55,6 +55,10 @@ app.get('/.search', (req, res) => {
 
 })
 
+app.get('/cats', (req, res) => {
+    res.render('cats.ejs');
+})
+
 app.get('*', (request, response) => {
     response.send("This page is doesn't exist")
 })

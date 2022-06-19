@@ -1,0 +1,19 @@
+
+<%- include ('partials/head.ejs') %> 
+
+    <h1>Browsing the <%=name%> subreddit </h1>
+    <h2><%= description %> </h2>
+    <h2># of subscribers:  <%= subscribers %> </h2>
+    <hr>
+    <% for(let post of posts){ %>
+        <article>
+            <h2><%= post.author %>  </h2>
+            <h3><%=post.title %> </h3>   
+            <% if(post.img){ %>
+                <img src="<%= post.img %> " alt="">
+            <% } %> 
+        </article>
+    <% } %> 
+
+</body>
+</html>
