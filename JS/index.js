@@ -191,32 +191,19 @@ function maxSubarraySum(arr, num){
     return minLen === Infinity ? 0 : minLen;
   }
 
-  function findLongestSubstring(str){
+  function findLongestSubstring(str) {
+    let longest = 0;
+    let seen = {};
     let start = 0;
-    let end = 1;
-    let substringLength = 0;
-
-    if(str.length === 0){
-        return 0;
+   
+    for (let i = 0; i < str.length; i++) {
+      let char = str[i];
+      if (seen[char]) {
+        start = Math.max(start, seen[char]);
+      }
+      longest = Math.max(longest, i - start + 1);
+      seen[char] = i + 1;
     }
-    while(end < str.length){
-       
-        if(str[start] !== str[end]){
-            console.log(str[start]);
-            console.log(str[end]);
-            substringLength = Math.max(substringLength, end-start);
-            end++;
-        }
-        else if(str[start] === str [end]){
-            start = end;
-            end++;
-        }
-        else {
-            break;
-        }
-    } 
-
-    return substringLength;
+    return longest;
   }
 
-  findLongestSubstring('rithmschool');
